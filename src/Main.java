@@ -5,10 +5,18 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        ValidaSenha usuario = new ValidaSenha(56789);
-        System.out.println("Digite a sua senha");
-        int numero = scanner.nextInt();
-        usuario.login(numero);
+        int numero1 = 0;
+        int numero2 = 0;
+
+        ComparaNumeros comparador = new ComparaNumeros();
+
+        System.out.println("Digite o primeiro número que deseja comparar.");
+        numero1 = scanner.nextInt();
+
+        System.out.println("Digite o segundo número que deseja comparar.");
+        numero2 = scanner.nextInt();
+
+        comparador.compararNumeros(numero1, numero2);
 
         scanner.close();
     }
