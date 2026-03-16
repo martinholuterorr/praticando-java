@@ -5,18 +5,13 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        int numero1 = 0;
-        int numero2 = 0;
+        DescontoCompra compra = new DescontoCompra();
+        double valor = 0;
 
-        ComparaNumeros comparador = new ComparaNumeros();
+        System.out.println("Digite o valor da compra:");
+        valor = scanner.nextDouble();
 
-        System.out.println("Digite o primeiro número que deseja comparar.");
-        numero1 = scanner.nextInt();
-
-        System.out.println("Digite o segundo número que deseja comparar.");
-        numero2 = scanner.nextInt();
-
-        comparador.compararNumeros(numero1, numero2);
+        compra.verificaDesconto(valor);
 
         scanner.close();
     }
