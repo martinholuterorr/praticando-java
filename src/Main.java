@@ -5,13 +5,13 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        DescontoCompra compra = new DescontoCompra();
-        double valor = 0;
+        VerificacaoDiaUtil usuario = new VerificacaoDiaUtil();
+        String dia = null;
 
-        System.out.println("Digite o valor da compra:");
-        valor = scanner.nextDouble();
+        System.out.println("Digite o dia da semana(em letras minúscilas):");
+        dia = scanner.nextLine();
 
-        compra.verificaDesconto(valor);
+        usuario.verificaDia(dia.toLowerCase());
 
         scanner.close();
     }
