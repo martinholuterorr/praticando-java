@@ -5,21 +5,16 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        VerificacaoTriangulo usuario = new VerificacaoTriangulo();
-        int lado1 = 0;
-        int lado2 = 0;
-        int lado3 = 0;
+        VerificacaoDoarSangue doador = new VerificacaoDoarSangue();
+        int idade = 0;
+        double peso = 0;
 
-        System.out.println("Digite o valor do primeiro lado: ");
-        lado1 = scanner.nextInt();
+        System.out.println("Digite a idade do doador: ");
+        idade = scanner.nextInt();
+        System.out.println("Digite o peso do doador(em kg): ");
+        peso = scanner.nextDouble();
 
-        System.out.println("Digite o valor do segundo lado: ");
-        lado2 = scanner.nextInt();
-
-        System.out.println("Digite o valor do terceiro lado: ");
-        lado3 = scanner.nextInt();
-
-        usuario.verificaTriangulo(lado1, lado2, lado3);
+        doador.verificaDoador(idade, peso);
 
         scanner.close();
     }
