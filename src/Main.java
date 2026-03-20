@@ -5,16 +5,16 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        VerificacaoDoarSangue doador = new VerificacaoDoarSangue();
-        int idade = 0;
-        double peso = 0;
+        VerificacaoSistemaSeguranca usuario = new VerificacaoSistemaSeguranca();
+        int codigoAcesso = 0;
+        int nivelPermissao = 0;
 
-        System.out.println("Digite a idade do doador: ");
-        idade = scanner.nextInt();
-        System.out.println("Digite o peso do doador(em kg): ");
-        peso = scanner.nextDouble();
+        System.out.println("Digite o código de acesso: ");
+        codigoAcesso = scanner.nextInt();
+        System.out.println("Digite o nível de permissão: ");
+        nivelPermissao = scanner.nextInt();
 
-        doador.verificaDoador(idade, peso);
+        usuario.verificaAcesso(codigoAcesso, nivelPermissao);
 
         scanner.close();
     }
