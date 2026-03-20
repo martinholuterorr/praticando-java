@@ -5,13 +5,21 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        VerificacaoEmprestimo usuario = new VerificacaoEmprestimo();
-        double valor = 0;
+        VerificacaoTriangulo usuario = new VerificacaoTriangulo();
+        int lado1 = 0;
+        int lado2 = 0;
+        int lado3 = 0;
 
-        System.out.println("Digite o valor do empréstimo:");
-        valor = scanner.nextDouble();
+        System.out.println("Digite o valor do primeiro lado: ");
+        lado1 = scanner.nextInt();
 
-        usuario.verificaEmprestimo(valor);
+        System.out.println("Digite o valor do segundo lado: ");
+        lado2 = scanner.nextInt();
+
+        System.out.println("Digite o valor do terceiro lado: ");
+        lado3 = scanner.nextInt();
+
+        usuario.verificaTriangulo(lado1, lado2, lado3);
 
         scanner.close();
     }
